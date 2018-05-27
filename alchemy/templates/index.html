@@ -8,7 +8,11 @@
 {% endblock %}
 
 {% block title %}
-  {{ SITENAME }} | {{ SITESUBTITLE }}
+  {% if SITESUBTITLE %}
+    {{ SITENAME }} | {{ SITESUBTITLE }}
+  {% else %}
+    {{ SITENAME }}
+  {% endif %}
 {% endblock %}
 
 {% block page_header %}
